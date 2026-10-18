@@ -1,0 +1,31 @@
+{
+  "name": "wedding-3d-platform",
+  "version": "1.0.0",
+  "description": "Platform Undangan Digital 3D Interaktif Premium",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "build": "cd client && npm run build",
+    "client:dev": "cd client && npm run dev",
+    "server:dev": "nodemon server/index.js",
+    "lint": "eslint server/ --fix"
+  },
+  "keywords": ["wedding", "3d", "invitation", "interactive"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.5",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.1.0",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.3.1",
+    "sharp": "^0.32.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
