@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs.js';
+import bcrypt from 'bcryptjs';
 import { query } from '../config/database.js';
 import { generateToken } from '../middleware/auth.js';
 
