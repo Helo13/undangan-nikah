@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "node server/index.js",
     "start": "node server/index.js",
-    "build": "cd client && npm run build",
     "client:dev": "cd client && npm run dev",
     "server:dev": "nodemon server/index.js",
     "lint": "eslint server/ --fix"
