@@ -9,10 +9,6 @@ import contentRoutes from './routes/content.js';
 import mediaRoutes from './routes/media.js';
 import rsvpRoutes from './routes/rsvp.js';
 import { initializeDatabase } from './config/database.js';
-import contentRoutes from './routes/content.js';
-import mediaRoutes from './routes/media.js';
-import rsvpRoutes from './routes/rsvp.js';
-import { initializeDatabase } from './config/database.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
