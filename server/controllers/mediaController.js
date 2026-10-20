@@ -1,6 +1,6 @@
 import { query } from '../config/database.js';
-import fs from 'fs.js';
-import path from 'path.js';
+import fs from 'fs';
+import path from 'path';
 
 export async function uploadMedia(req, res) {
   try {
