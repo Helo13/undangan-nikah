@@ -1,10 +1,14 @@
-import 'dotenv/config.js';
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import authRoutes from './routes/auth.js';
+import contentRoutes from './routes/content.js';
+import mediaRoutes from './routes/media.js';
+import rsvpRoutes from './routes/rsvp.js';
+import { initializeDatabase } from './config/database.js';
 import contentRoutes from './routes/content.js';
 import mediaRoutes from './routes/media.js';
 import rsvpRoutes from './routes/rsvp.js';
