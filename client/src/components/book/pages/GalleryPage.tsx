@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 export function GalleryPage() {
   const [images, setImages] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch('/api/media/gallery?category=gallery')
+  fetch(`${API_URL}/api/media/gallery?category=gallery`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
