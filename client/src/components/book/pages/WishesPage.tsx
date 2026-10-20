@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 export function WishesPage() {
   const [form, setForm] = useState({ name: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
@@ -7,11 +9,11 @@ export function WishesPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await fetch('/api/rsvp/wishes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
+      await fetch(`${API_URL}/api/rsvp/wishes`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(form),
+});
       setSubmitted(true);
       setForm({ name: '', message: '' });
     } catch {
