@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// Removed unused import
 import { useAppStore } from '@/store/appStore';
 
 export function CoverPage() {
