@@ -15,11 +15,11 @@ export function RSVPPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/rsvp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
+     const res = await fetch(`${API_URL}/api/rsvp`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(form),
+});
       if (res.ok) {
         setSubmitted(true);
       }
