@@ -1,3 +1,4 @@
+const API_URL = import.meta.env.VITE_API_URL || '';
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
@@ -99,19 +100,19 @@ export const useAppStore = create<AppState>()(
 
     content: null,
     contentLoaded: false,
-    loadContent: async () => {
-      try {
-        const res = await fetch('/api/content');
-        if (res.ok) {
-          const data = await res.json();
-          set({ content: data, contentLoaded: true });
-        } else {
-          set({ contentLoaded: true });
-        }
-      } catch {
-        set({ contentLoaded: true });
-      }
-    },
+   loadContent: async () => {
+  try {
+    const res = await fetch(`${API_URL}/api/content`);
+    if (res.ok) {
+      const data = await res.json();
+      set({ content: data, contentLoaded: true });
+    } else {
+      set({ contentLoaded: true });
+    }
+  } catch {
+    set({ contentLoaded: true });
+  }
+},
 
     musicPlaying: false,
     toggleMusic: () => set((s) => ({ musicPlaying: !s.musicPlaying })),
